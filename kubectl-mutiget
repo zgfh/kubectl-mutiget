@@ -1,0 +1,7 @@
+#!/bin/bash
+
+for i in `kubectl config get-contexts -o name`
+do
+  echo "---------- cluster: $i ----------"
+  kubectl --context=$i get $@ ;
+done
