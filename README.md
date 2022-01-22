@@ -47,6 +47,10 @@ test2-5fb85989fd-r2nfr   1/1     Running   0          22m
 ```
 KUBECONFIG=~/.kube/config:~/.kube/config2 kubectl config view --flatten > /tmp/config && mv -f /tmp/config ~/.kube/config
 ```
-
+2. 如果你是按每个集群一个kubeconfig 文件的方式进行管理，则你可以用这种方式查询
+```
+export KUBECONFIG=~/.kube/kind-k8s-1-15:~/.kube/kind-k8s-1-18:~/.kube/kind-k8s-1-23
+kubectl mutiget pod
+```
 
 
