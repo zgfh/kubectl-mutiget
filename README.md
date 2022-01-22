@@ -41,3 +41,12 @@ No resources found in default namespace.
 NAME                     READY   STATUS    RESTARTS   AGE
 test2-5fb85989fd-r2nfr   1/1     Running   0          22m
 ```
+
+### 常见问题
+1. 如何合并多个kubeconfig 文件为一个？ 
+```
+KUBECONFIG=~/.kube/config:~/.kube/config2 kubectl config view --flatten > /tmp/config && mv -f /tmp/config ~/.kube/config
+```
+
+
+
